@@ -31,6 +31,38 @@ resource "aws_dynamodb_table" "cliente" {
     type = "S"
   }
 
+   global_secondary_index {
+    name               = "IdIndex"
+    hash_key           = "id"
+    projection_type    = "ALL"
+    write_capacity     = 5
+    read_capacity      = 5
+  }
+
+  global_secondary_index {
+    name               = "NomeIndex"
+    hash_key           = "nome"
+    projection_type    = "ALL"
+    write_capacity     = 5
+    read_capacity      = 5
+  }
+
+  global_secondary_index {
+    name               = "TelefoneIndex"
+    hash_key           = "telefone"
+    projection_type    = "ALL"
+    write_capacity     = 5
+    read_capacity      = 5
+  }
+
+  global_secondary_index {
+    name               = "EmailIndex"
+    hash_key           = "email"
+    projection_type    = "ALL"
+    write_capacity     = 5
+    read_capacity      = 5
+  }
+
   tags = {
     Name = "TabelaCliente"
   }
