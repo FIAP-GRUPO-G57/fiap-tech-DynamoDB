@@ -40,5 +40,5 @@ jobs:
       run: terraform plan
 
     # Descomente a próxima linha para aplicar as mudanças automaticamente
-    # - name: 'Terraform Apply'
-    #   run: terraform apply -auto-approve
+    - name: 'Terraform Apply'
+      run: terraform apply -auto-approve
